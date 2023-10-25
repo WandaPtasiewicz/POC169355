@@ -8,7 +8,8 @@ public class TestTime {
 		System.out.println(t1.hours+":"+ t1.minutes);
 		t2.hours=3;
 		t2.minutes=5;
-		t1.addTime(t2);
+		t1 = t1.addTime(t2);
+
 		System.out.println(t1.hours+":"+ t1.minutes);
 	}
 }
@@ -17,20 +18,21 @@ public class TestTime {
 	int hours;
 	int minutes;
 
-	public void addTime(Time otherTime){
+	public Time addTime(Time otherTime){
+		Time t3= new Time();
 		if(minutes + otherTime.minutes>59){
-			hours+=1;
-			minutes+=otherTime.minutes -60;
+			t3.hours+=1;
+			t3.minutes=minutes+otherTime.minutes -60;
 		}else{
-			minutes+=otherTime.minutes;
+			t3.minutes=minutes+otherTime.minutes;
 
 		}
 
 		if(hours +otherTime.hours>23){
-			hours+=otherTime.hours-24;
+			t3.hours=hours+otherTime.hours-24;
 		}else{
-			hours+= otherTime.hours;
+			t3.hours=hours+ otherTime.hours;
 		}
-
+	return t3;
 	}
 }
