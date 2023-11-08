@@ -11,6 +11,7 @@ class TestTemperatureHistory {
         t1.addTemperature(36.5);
         t1.addTemperature(30.5);
         t1.removeTemperature(2);
+        System.out.println(t1.averageResult());
 
     }
 }
