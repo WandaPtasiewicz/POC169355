@@ -1,8 +1,9 @@
 package com.education.course;
 
-public class TestModule {
-    Module m1 = new Module(23);
-    m1.setPoints(21);
-    System.out.println(m1.getPoints);
-    
+ class TestModule {
+     public static void main(String[] args) {
+         Module m1 = new Module(21);
+         System.out.println(m1.getPoints());
+         m1.setPoints(23);
+     }
 }
