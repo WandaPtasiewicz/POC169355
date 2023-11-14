@@ -3,13 +3,14 @@ package pl.weather.zad23;
 import java.util.ArrayList;
 
 class TemperatureHistory {
-    private ArrayList <Double>temperatures;
+    private ArrayList <Double>temperatures = new ArrayList<>();
 
     public TemperatureHistory(){
 
     }
 
     public ArrayList<Double> getTemperatures() {
+
         return temperatures;
     }
 
@@ -17,16 +18,16 @@ class TemperatureHistory {
         this.temperatures = temperatures;
     }
 
-    public void addTemperature(Double temperature){
+    public void addTemperature( Double temperature){
         this.temperatures.add(temperature);
     }
     public void removeTemperature(int index){
         this.temperatures.remove(index);
     }
-    public Double averageResult(){
-        double wynik=0;
-        for(int i=0;i<this.temperatures.size()-1;i++){
-            wynik+=this.temperatures.get(i);
+    public double averageResult(){
+         Double wynik=0.0;
+        for(int i=0;i<this.temperatures.size();i++){
+             wynik+=this.temperatures.get(i);
         }
         return wynik/this.temperatures.size();
     }
