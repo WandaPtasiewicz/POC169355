@@ -1,13 +1,17 @@
 package com.instance.zad3;
 
 class Singleton {
-    static int instance;
+    private static Singleton instance;
 
     private Singleton(){
 
     }
 
-    public static int getInstance() {
+    public static Singleton getInstance() {
+
+        if (instance == null) {
+            instance = new Singleton();
+        }
         return instance;
     }
 }
