@@ -6,7 +6,7 @@ public class TestQueue {
         g1.enqueue("mama");
         g1.enqueue("tata");
         g1.enqueue("gg");
-        //g1.dequeue();
-        System.out.println(g1);
+        g1.dequeue();
+        System.out.println(g1.toString());
     }
 }

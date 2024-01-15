@@ -9,6 +9,8 @@ public class Test3 {
         if (tab.length != 2) {
             return;
         }
+        tab[0]=a;
+        tab[1]=b;
 
     }
 }

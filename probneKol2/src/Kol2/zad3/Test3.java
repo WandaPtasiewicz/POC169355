@@ -23,6 +23,5 @@ public class Test3 {
     }
     public static<E extends Comparable<? super E>> void appendFromEnd(ArrayList<E>A, ArrayList<E>B){
         B.addAll( A);
-
     }
 }
